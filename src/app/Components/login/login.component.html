@@ -1,0 +1,89 @@
+<!-- <div class="oldForm">
+  <h2 class="container text-center mt-4" style="color: #38a2a6;">Login</h2>
+  <div class="container w-75">
+    <form [formGroup]="loginForm" (submit)="submit()">
+      <div class="row">
+        <div class="form-check ">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="Doctor"
+            (click)="getrule($event)">
+          <label class="form-check-label" for="exampleRadios1">
+            Doctor
+          </label>
+        </div>
+        <div class="form-check mb-4">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="students"
+            (click)="getrule($event)">
+          <label class="form-check-label" for="exampleRadios2">
+            Student
+          </label>
+        </div>
+        <div class="mb-3 col-sm-12 col-md-6">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            formControlName="email" placeholder="Enter Email">
+        </div>
+        <div class="mb-3 col-sm-12 col-md-6">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" formControlName="password" placeholder="Enter Complex Password">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-outline-light d" style="background-color: #38a2a6;">SIGN IN</button>
+    </form>
+  </div>
+</div> -->
+
+<div class="container mb-5" >
+  <div class=" row h-100 justify-content-center align-items-center mt-5 mb-5">
+    <div class="mx-auto col-10 col-md-8 col-lg-6   ">
+      <!-- Form -->
+
+      <form  [formGroup]="loginForm" (submit)=" submit()" >
+        <h1> Login In</h1>
+        <!-- Input fields -->
+        <div class="row">
+
+          <div class="form-group col-md-12 position-relative">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              class="form-control email"
+              id="email"
+              placeholder="Email..."
+              name="email"
+              formControlName="email"
+            />
+          </div>
+        </div>
+         <div class="row">
+          <div class="form-group col-md-12 position-relative">
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              class="form-control password"
+              id="password"
+              placeholder="Password..."
+              name="password"
+              formControlName="password"
+            />
+          </div>
+         </div>
+         <div class="form-check pt-3">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="doctor" (click)=" getrule($event)">
+          <label class="form-check-label" for="flexRadioDefault1">
+            Doctor
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="student" (click)=" getrule($event)">
+          <label class="form-check-label" for="flexRadioDefault2">
+            Student
+          </label>
+        </div>
+        <button type="submit" class="btn btn-outline btn-customized mt-4">
+          Logn in
+        </button>
+      </form>
+      <!-- Form end -->
+    </div>
+  </div>
+</div>

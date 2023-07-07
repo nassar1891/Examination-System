@@ -1,0 +1,24 @@
+.box
+{
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+ .box::before
+{
+    content: attr(data-work);
+    position: absolute;
+    background-color: rgba(167, 163, 163, 0.76) ;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: 0.3s;
+    font-size: 1.5rem;
+    transform: translateX(calc(-100% - 5px));
+}
+ .box:hover::before{
+    transform: translateX(0);
+}

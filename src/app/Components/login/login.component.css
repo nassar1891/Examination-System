@@ -1,0 +1,22 @@
+form{
+  background-color: #19283f;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+
+}
+.btn
+{
+  color:  white;
+  padding: 1rem 2rem ;
+  border-radius: 0;
+  border-color: #33d1cc;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+form:hover
+{
+  outline: 5px solid #33d1cc;
+}

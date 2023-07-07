@@ -1,0 +1,40 @@
+<div class="container">
+  <div class=" row h-100 justify-content-center align-items-center mt-5 mb-5">
+    <div class="mx-auto col-10 col-md-8 col-lg-6   ">
+      <!-- Form -->
+      <form>
+        <h1> Contact Us</h1>
+        <!-- Input fields -->
+        <div class="row">
+          <div class="form-group col-md-12 position-relative">
+            <label for="email">Email</label>
+            <input type="email" class="form-control email" id="email" placeholder="Email..." name="email" />
+          </div>
+        </div>
+        <div class="col-md-12">
+          <label for="validationServerUsername" class="form-label">Username</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend3">@</span>
+            <input type="text" class="form-control is-invalid" id="validationServerUsername"
+              aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+            <div id="validationServerUsernameFeedback" class="invalid-feedback">
+              Please choose a username.
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="validationTextarea" class="form-label">Message</label>
+          <textarea class="form-control" id="validationTextarea" placeholder="Required example textarea"
+            required></textarea>
+          <div class="invalid-feedback">
+            Please enter a message in the textarea.
+          </div>
+        </div>
+        <button type="submit" class="btn btn-outline btn-customized mt-4">
+          Send
+        </button>
+      </form>
+      <!-- Form end -->
+    </div>
+  </div>
+</div>

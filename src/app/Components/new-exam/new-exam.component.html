@@ -1,0 +1,36 @@
+<h2 class="container text-center mt-4 mb-5" style="color: #33d1cc;">NEW EXAM</h2>
+<div class="container w-50">
+  <form (submit)="onSubmit()" *ngFor="let item of questions; let i = index">
+    <div class="containerExam">
+      <div class="alert alert-success fs-4">
+        <span class="fs-5">{{i+1}}.</span> ({{item?.question}})
+      </div>
+      <div class="row">
+        <div>
+          <div class="col-sm-6">
+            <input type="radio" value="{{item?.answer1}}" name="{{i}}" (change)="getAnswer($event)">
+            <label class="ms-2" for="1">{{item?.answer1}}</label>
+          </div>
+          <div class="col-sm-6">
+            <input type="radio" value="{{item?.answer2}}" name="{{i}}" (change)="getAnswer($event)">
+            <label class="ms-2" for="2">{{item?.answer2}}</label>
+          </div>
+          <div class="col-sm-6">
+            <input type="radio" value="{{item?.answer3}}" name="{{i}}" (change)="getAnswer($event)">
+            <label class="ms-2" for="3">{{item?.answer3}}</label>
+          </div>
+          <div class="col-sm-6 mb-3">
+            <input type="radio" value="{{item?.answer4}}" name="{{i}}" (change)="getAnswer($event)">
+            <label class="ms-2" for="4">{{item?.answer4}}</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <div class="row w-25 m-auto mb-5">
+    <button *ngIf="!showResult" type="submit" class="btn btn-outline-light p-3 fw-bolder text-light"
+      style="background-color: #33d1cc;" (click)="onSubmit()">SHOW</button>
+    <button *ngIf="showResult" class="btn btn-outline-light " style="background-color:#33d1cc;">
+      {{total}}/{{questions.length}} </button>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+img {
+  width: 700px;
+  height: 700px;
+}
+.container {
+  width: 800px;
+  margin: auto;
+}
+
+.header
+ {
+  font-size: 70px !important;
+ }

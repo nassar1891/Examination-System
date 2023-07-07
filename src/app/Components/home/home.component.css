@@ -1,0 +1,51 @@
+.carousel-item
+{
+    height: calc(100vh - 70px);
+    background-size: cover;
+    background: no-repeat scroll center scroll ;
+    position: relative;
+
+}
+.carousel-item::before
+{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    opacity: 0.5;
+}
+.carousel-caption
+{
+    bottom: 180px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.carousel-caption h1{
+    font-size: 80px;
+    font-weight: 700;
+}
+.carousel-caption p {
+    font-size: 18px;
+    top: 2rem;
+}
+.slider-btn {
+    margin-top: 30px;
+}
+.slider-btn .btn  {
+   background-color: #5d6f84 ;
+   color: white;
+   padding: 1rem 2rem ;
+   border-radius: 0;
+   margin-right: 10px;
+}
+.slider-btn .btn .btn-2 {
+    background-color: white ;
+    color: #5d6f84;
+    padding: 1rem 2rem ;
+    border-radius: 0;
+    margin-right: 10px;
+ }

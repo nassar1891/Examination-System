@@ -1,0 +1,131 @@
+<!-- <div class="containerRegister">
+  <h2 class="container text-center mt-4" style="color: #38a2a6;">Create Account</h2>
+  <div class="container w-75">
+
+    <form [formGroup]="registerForm" (submit)="Send($event)">
+      <div class="row">
+        <div class="mb-3 col-sm-12 col-md-6">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            formControlName="email" placeholder="Enter Email">
+          <ng-container *ngIf="getEmail.touched">
+            <div id="emailHelp" class="form-text text-danger" *ngIf="getEmail.hasError('email')">Enter Valid Email</div>
+            <div id="emailHelp" class="form-text text-danger" *ngIf="getEmail.hasError('required')">Enter Email</div>
+          </ng-container>
+        </div>
+        <div class="mb-3 col-sm-12 col-md-6">
+          <label for="exampleInputEmail1" class="form-label">User Name</label>
+          <input formControlName="userName" type="text" class="form-control" id="exampleInputEmail1"
+            placeholder="Enter User Name">
+          <ng-container *ngIf="getUser.touched">
+            <div id="emailHelp" class="form-text text-danger" *ngIf="getUser.hasError('required')">Enter User</div>
+          </ng-container>
+        </div>
+        <div class="mb-3 col-sm-12 col-md-6">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" formControlName="password" placeholder="Enter Complex Password">
+          <ng-container *ngIf="getPassword.touched">
+            <div id="emailHelp" class="form-text text-danger" *ngIf="getPassword.hasError('minlength')">Enter Valid
+              Password</div>
+          </ng-container>
+        </div>
+        <div class="mb-3 col-sm-12 col-md-6">
+          <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+          <input formControlName="confirmPass" type="password" class="form-control" placeholder="Confirm Password">
+          <ng-container *ngIf="getConfirm.touched">
+            <div id="emailHelp" class="form-text text-danger" *ngIf="getConfirm.hasError('minlength')">Enter Valid
+              Password</div>
+          </ng-container>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-outline-light" style="background-color: #38a2a6;"
+        [disabled]="registerForm.invalid || (registerForm.value.password !== registerForm.value.confirmPass)">SIGN
+        UP</button>
+    </form>
+  </div>
+</div> -->
+
+<div class="container" >
+  <div class=" row h-100 justify-content-center align-items-center mt-5">
+    <div class="mx-auto col-10 col-md-8 col-lg-6   ">
+      <!-- Form -->
+      <form  [formGroup]="registerForm" (submit)="onSubmit($event)">
+        <h1 class="text-center"> Sign Up</h1>
+        <!-- Input fields -->
+        <div class="row">
+
+          <div class="form-group col-md-12 position-relative ps-4">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              class="form-control email"
+              id="email"
+              placeholder="Email..."
+              name="email"
+              formControlName="email"
+            />
+            <ng-container *ngIf="getEmail.touched">
+              <div *ngIf="getEmail.hasError('required')" class="text text-danger">enter email</div>
+            </ng-container>
+
+          </div>
+          <div class="form-group col-md-12 position-relative ps-4">
+            <label for="username">Username:</label>
+            <input
+              type="text"
+              class="form-control username"
+              id="username"
+              placeholder="Username..."
+              name="username"
+              formControlName="username"
+            />
+            <ng-container *ngIf="getUsername.touched">
+              <div *ngIf="getUsername.hasError('required')" class="text text-danger">enter username</div>
+            </ng-container>
+          </div>
+        </div>
+         <div class="row">
+          <div class="form-group col-md-6 position-relative ps-4">
+            <label for="password">Password:</label>
+            <input
+              type="password"
+              class="form-control password"
+              id="password"
+              placeholder="Password..."
+              name="password"
+              formControlName="password"
+            />
+            <ng-container *ngIf="getPassword.touched">
+              <div *ngIf="getPassword.hasError('required')"class="text text-danger">enter password</div>
+              <div *ngIf="getPassword.hasError('minlength')" class="text text-danger"> pass length > 4</div>
+            </ng-container>
+
+          </div>
+          <div class="form-group col-md-6 position-relative ps-4">
+            <label for="password">Confirm Password:</label>
+            <input
+              type="password"
+              class="form-control password"
+              id="password"
+              placeholder="Password..."
+              name="password"
+              formControlName="confirmPassword"
+            />
+            <ng-container *ngIf="getConfirmPassword.touched">
+              <div *ngIf="getConfirmPassword.hasError('required')" class="text text-danger">enter password</div>
+              <div *ngIf="getConfirmPassword.hasError('minlength')" class="text text-danger" > pass length > 4</div>
+            </ng-container>
+          </div>
+         </div>
+         <div class="text-center">
+          <button type="submit" class="btn btn-outline btn-customized mt-4 mb-5"
+          [disabled]="registerForm.invalid || registerForm.value.password != registerForm.value.confirmPassword" >
+           Sign Up
+         </button>
+         </div>
+
+      </form>
+      <!-- Form end -->
+    </div>
+  </div>
+</div>
